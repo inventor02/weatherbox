@@ -1,4 +1,7 @@
-The project is licensed under two licenses.
+There are two licenses covering different parts of the project.
 
 The HARDWARE, which is everything in the "hardware" folder is licensed under the CERN Open Hardware
 License Version 2 (Permissive). Details are in hardware/LICENSE.
+
+The SOFTWARE, which is everything in the "software" folder is licensed under the ISC license.
+Details are in software/LICENSE.
