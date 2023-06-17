@@ -1,0 +1,6 @@
+[submodule "hardware/lib/ki-lime-pi-pico"]
+	path = hardware/lib/ki-lime-pi-pico
+	url = git@github.com:recursivenomad/ki-lime-pi-pico.git
+[submodule "firmware/lib/pico-sdk"]
+	path = firmware/lib/pico-sdk
+	url = git@github.com:raspberrypi/pico-sdk.git
