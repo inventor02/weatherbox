@@ -1,5 +1,6 @@
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdint.h>
 
 #include "pico/stdlib.h"
 #include "pico/binary_info.h"
@@ -53,7 +54,12 @@ bool init()
     debug_init();
   #endif
 
-  if (cyw43_arch_init_with_country(CYW43_COUNTRY_UK)) {
+  unsigned char cc1 = CFG_CYW43_COUNTRY & 0x0000ff;
+  unsigned char cc2 = (CFG_CYW43_COUNTRY & 0x00ff00) >> 8;
+  uint8_t rev = (CFG_CYW43_COUNTRY & 0xff0000) >> 16;
+  printf("CYW43 country is %c%c rev %d\n", cc1, cc2, rev);
+
+  if (cyw43_arch_init_with_country(CFG_CYW43_COUNTRY)) {
     printf("CYW43 init failed!\n");
     return false;
   }
